@@ -17,6 +17,7 @@ import lombok.RequiredArgsConstructor;
 public class HttpExceptionHandler {
 
     private final AsynchronousRequestPort asynchronousRequestPort;
+
     @ExceptionHandler(BaseHttpException.class)
     public ResponseEntity<ErrorResponseDto> handleHttpException(BaseHttpException e) {
 

@@ -9,6 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import com.fiap.techchallenge.production.domain.Order;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -33,6 +34,8 @@ public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "status", nullable = false, columnDefinition = "varchar(255) DEFAULT 'new'")
     private String status;
 
     public Order toDomain() {
