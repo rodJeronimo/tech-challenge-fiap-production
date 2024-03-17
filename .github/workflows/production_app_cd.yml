@@ -49,7 +49,7 @@ jobs:
     - name: Build and Push to Amazon ECR
       env:
         REGISTRY: ${{ steps.login-ecr-public.outputs.registry }}
-        REGISTRY_ALIAS: "u0d1o6m1"
+        REGISTRY_ALIAS: "i2f8d1v7"
         REPOSITORY: ${{ env.APP_NAME }}
         IMAGE_TAG: ${{ env.DOCKER_TAG }}
       run: |
